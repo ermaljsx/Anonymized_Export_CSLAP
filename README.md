@@ -2,8 +2,7 @@
 
 This repository contains the synthetic data generation pipeline and the generated datasets required to evaluate the Correlated Storage Location Assignment Problem (CSLAP) under operational constraints.
 
-These environments mathematically enforce physical capacity limits ($\zeta_s$) and workload time limits ($T_s$) directly onto heterogeneous picking stations, preventing operations research algorithms from deriving mathematically "optimal" groupings that would inherently overflow local conveyor buffers in a real warehouse.
-
+These synthetic environments model a uniformly homogeneous warehouse where all stations possess identical physical capacities ($\zeta_s$) and processing speeds. By mathematically enforcing these physical bounds alongside strict workload time limits ($T_s$), the datasets prevent operations research algorithms from deriving unconstrained "optimal" groupings that would inherently overflow local conveyor buffers.
 ## Contents
 1. **`CSLAP_synthetic_data_generator.py`**: A python script that dynamically constructs warehouse networks ranging from 50 to thousands of SKUs. The generator ensures structural realism by deploying a Common Itemset correlation logic while ensuring structural matrix feasibility across all synthetic zones.
 2. **`synthetic_datasets/`**: Directory containing pre-generated `.csv` environments at specific item scaling benchmarks (50, 500, 1000, 2000 SKUs).
